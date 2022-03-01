@@ -1,0 +1,48 @@
+@import "../_variables/_variables";
+
+.todoList__heading {
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+}
+.todoList__wrap {
+	background-color: #2cccff;
+	border-radius: $borderRadiusTodo;
+	margin-bottom: 24px;
+	transition: 0.2s;
+	&.completed {
+		background-color: rgb(248, 144, 144);
+		&.draggingOver {
+			background-color: rgb(255, 84, 84);
+		}
+	}
+	&.draggingOver {
+		background-color: #01aee7ec;
+	}
+}
+.singleTodo {
+	display: flex;
+	background-color: #fff;
+	border-radius: $borderRadiusTodo;
+	font-size: 22px;
+	padding: 10px 20px;
+	align-items: center;
+	transition: 0.2s;
+	& + & {
+		margin-top: 10px;
+	}
+	&:hover {
+		transform: scale(1.05);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	}
+	&.dragging {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	}
+}
+.singleTodo__heading {
+	flex: 1;
+}
+.singleTodo__icon {
+	padding: 0 2px;
+	cursor: pointer;
+}

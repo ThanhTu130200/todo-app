@@ -1,0 +1,36 @@
+@import "../_variables/variables";
+
+.inputField {
+	position: relative;
+}
+.inputField__input {
+	width: 100%;
+	border-radius: $borderRadiusInput;
+	border: none;
+	padding: 16px 20px;
+	box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+	transition: 0.2s;
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.2);
+	}
+}
+.inputField__submit {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: $borderRadiusInput;
+	width: $buttonSize;
+	height: $buttonSize;
+	border: none;
+	background-color: #2cccff;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+	transition: 0.2s;
+	&:active {
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+		transform: scale(0.8);
+	}
+}
